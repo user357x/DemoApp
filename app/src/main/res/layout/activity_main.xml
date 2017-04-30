@@ -1,258 +1,325 @@
 <?xml version="1.0" encoding="utf-8"?>
-
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+<com.sothree.slidinguppanel.SlidingUpPanelLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:sothree="http://schemas.android.com/apk/res-auto"
+    android:gravity="bottom"
+    sothree:shadowHeight="0dp"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:paddingLeft="20dp"
-    android:paddingRight="20dp">
+    android:orientation="vertical">
 
-    <TextView
-        android:paddingTop="20dp"
+    <LinearLayout
         android:gravity="center"
         android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp">
+
+        <TextView
+            android:paddingTop="20dp"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Введите пароль"
+            android:textSize="25sp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageButton
+                style="@style/da_background_password_item"
+                android:id="@+id/radioButtonOne"
+                android:paddingTop="20dp"
+                android:paddingBottom="20dp"
+                android:src="@drawable/ic_radio_button_unchecked_red_24dp"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content" />
+
+            <ImageButton
+                style="@style/da_background_password_item"
+                android:id="@+id/radioButtonTwo"
+                android:paddingTop="20dp"
+                android:paddingBottom="20dp"
+                android:src="@drawable/ic_radio_button_unchecked_red_24dp"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content" />
+
+            <ImageButton
+                style="@style/da_background_password_item"
+                android:id="@+id/radioButtonThree"
+                android:paddingTop="20dp"
+                android:paddingBottom="20dp"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:src="@drawable/ic_radio_button_unchecked_red_24dp" />
+
+            <ImageButton
+                style="@style/da_background_password_item"
+                android:id="@+id/radioButtonFour"
+                android:paddingTop="20dp"
+                android:paddingBottom="20dp"
+                android:src="@drawable/ic_radio_button_unchecked_red_24dp"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content" />
+
+            <ImageButton
+                style="@style/da_background_password_item"
+                android:id="@+id/radioButtonFive"
+                android:paddingTop="20dp"
+                android:paddingBottom="20dp"
+                android:src="@drawable/ic_radio_button_unchecked_red_24dp"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content" />
+
+            <ImageButton
+                style="@style/da_background_password_item"
+                android:id="@+id/radioButtonSix"
+                android:paddingTop="20dp"
+                android:paddingBottom="20dp"
+                android:src="@drawable/ic_radio_button_unchecked_red_24dp"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                style="@style/da_background_password_button"
+                android:textColor="@drawable/password_button_text_color"
+                android:id="@+id/buttonOne"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:textSize="40dp"
+                android:text="1"
+                android:paddingTop="20dp"
+                android:paddingBottom="20dp"/>
+
+            <TextView
+                style="@style/da_background_password_button"
+                android:textColor="@drawable/password_button_text_color"
+                android:id="@+id/buttonTwo"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:textSize="40dp"
+                android:text="2"
+                android:paddingTop="20dp"
+                android:paddingBottom="20dp"/>
+
+            <TextView
+                style="@style/da_background_password_button"
+                android:textColor="@drawable/password_button_text_color"
+                android:id="@+id/buttonThree"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:textSize="40dp"
+                android:text="3"
+                android:paddingTop="20dp"
+                android:paddingBottom="20dp"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                style="@style/da_background_password_button"
+                android:textColor="@drawable/password_button_text_color"
+                android:id="@+id/buttonFour"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:textSize="40dp"
+                android:text="4"
+                android:paddingTop="20dp"
+                android:paddingBottom="20dp"/>
+
+            <TextView
+                style="@style/da_background_password_button"
+                android:textColor="@drawable/password_button_text_color"
+                android:id="@+id/buttonFive"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:textSize="40dp"
+                android:text="5"
+                android:paddingTop="20dp"
+                android:paddingBottom="20dp"/>
+
+            <TextView
+                style="@style/da_background_password_button"
+                android:textColor="@drawable/password_button_text_color"
+                android:id="@+id/buttonSix"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:textSize="40dp"
+                android:text="6"
+                android:paddingTop="20dp"
+                android:paddingBottom="20dp"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/da_background_password_button"
+                android:textColor="@drawable/password_button_text_color"
+                android:id="@+id/buttonSeven"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:padding="20dp"
+                android:text="7"
+                android:textSize="40dp" />
+
+            <TextView
+                style="@style/da_background_password_button"
+                android:textColor="@drawable/password_button_text_color"
+                android:id="@+id/buttonEight"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:padding="20dp"
+                android:text="8"
+                android:textSize="40dp" />
+
+            <TextView
+                style="@style/da_background_password_button"
+                android:textColor="@drawable/password_button_text_color"
+                android:id="@+id/buttonNine"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:padding="20dp"
+                android:text="9"
+                android:textSize="40dp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center">
+
+            <ImageButton
+                style="@style/da_background_fingerprint_button"
+                android:id="@+id/buttonFingerPrint"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:src="@drawable/ic_fingerprint_black_48dp"
+                android:gravity="center"
+                android:paddingBottom="20dp"
+                android:paddingTop="20dp"
+                android:contentDescription="img" />
+
+            <TextView
+                style="@style/da_background_password_button"
+                android:textColor="@drawable/password_button_text_color"
+                android:id="@+id/buttonZero"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:textSize="40dp"
+                android:text="0"
+                android:paddingTop="20dp"
+                android:paddingBottom="20dp"/>
+
+            <ImageButton
+                style="@style/da_background_fingerprint_button"
+                android:id="@+id/buttonBackspace"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:src="@drawable/ic_backspace_red_36dp"
+                android:gravity="center"
+                android:paddingBottom="20dp"
+                android:paddingTop="20dp"
+                android:contentDescription="img" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Введите пароль"
-        android:textSize="25sp"/>
+        android:orientation="vertical"
+        android:gravity="center|top">
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-
-        <ImageButton
-            android:paddingTop="20dp"
-            android:paddingBottom="20dp"
-            android:background="@android:color/background_light"
-            android:src="@drawable/ic_radio_button_checked_black_24dp"
-            android:layout_weight="1"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content" />
-
-        <ImageButton
-            android:paddingTop="20dp"
-            android:paddingBottom="20dp"
-            android:background="@android:color/background_light"
-            android:src="@drawable/ic_radio_button_checked_black_24dp"
-            android:layout_weight="1"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content" />
-
-        <ImageButton
-            android:paddingTop="20dp"
-            android:paddingBottom="20dp"
-            android:layout_width="0dp"
+        <TextView
+            android:id="@+id/buttonCall"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:background="@android:color/background_light"
-            android:src="@drawable/ic_radio_button_checked_black_24dp" />
+            android:gravity="center"
+            android:textSize="27sp"
+            android:text="ПОЗВОНИТЬ НАМ"
+            android:background="#ffffff"
+            android:textColor="#c20000"
+            android:layout_margin="15dp"
+            android:drawableStart="@drawable/ic_call_black_24dp"
+            android:drawableLeft="@drawable/ic_call_black_24dp"
+            android:padding="10dp"/>
 
-        <ImageButton
-            android:paddingTop="20dp"
-            android:paddingBottom="20dp"
-            android:background="@android:color/background_light"
-            android:src="@drawable/ic_radio_button_checked_black_24dp"
-            android:layout_weight="1"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content" />
+        <TextView
+            android:layout_marginLeft="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="25sp"
+            android:text="900" />
 
-        <ImageButton
-            android:paddingTop="20dp"
-            android:paddingBottom="20dp"
-            android:background="@android:color/background_light"
-            android:src="@drawable/ic_radio_button_checked_black_24dp"
-            android:layout_weight="1"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content" />
+        <TextView
+            android:layout_marginLeft="20dp"
+            android:layout_marginBottom="10px"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:text="По России бесплатно" />
 
-        <ImageButton
-            android:paddingTop="20dp"
-            android:paddingBottom="20dp"
-            android:background="@android:color/background_light"
-            android:src="@drawable/ic_radio_button_checked_black_24dp"
-            android:layout_weight="1"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content" />
+        <TextView
+            android:layout_marginLeft="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="25sp"
+            android:text="8-800-555-35-35" />
+
+        <TextView
+            android:layout_marginLeft="20dp"
+            android:layout_marginBottom="10px"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:text="По России бесплатно" />
 
     </LinearLayout>
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-
-        <TextView
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:gravity="center"
-            android:textSize="40dp"
-            android:text="1"
-            android:background="@drawable/oval_button"
-            android:textColor="#c20000"
-            android:paddingTop="20dp"
-            android:paddingBottom="20dp"/>
-
-        <TextView
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:gravity="center"
-            android:textSize="40dp"
-            android:text="2"
-            android:background="@drawable/oval_button"
-            android:textColor="#c20000"
-            android:paddingTop="20dp"
-            android:paddingBottom="20dp"/>
-
-        <TextView
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:gravity="center"
-            android:textSize="40dp"
-            android:text="3"
-            android:background="@drawable/oval_button"
-            android:textColor="#c20000"
-            android:paddingTop="20dp"
-            android:paddingBottom="20dp"/>
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-
-        <TextView
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:gravity="center"
-            android:textSize="40dp"
-            android:text="4"
-            android:background="@drawable/oval_button"
-            android:textColor="#c20000"
-            android:paddingTop="20dp"
-            android:paddingBottom="20dp"/>
-
-        <TextView
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:gravity="center"
-            android:textSize="40dp"
-            android:text="5"
-            android:background="@drawable/oval_button"
-            android:textColor="#c20000"
-            android:paddingTop="20dp"
-            android:paddingBottom="20dp"/>
-
-        <TextView
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:gravity="center"
-            android:textSize="40dp"
-            android:text="6"
-            android:background="@drawable/oval_button"
-            android:textColor="#c20000"
-            android:paddingTop="20dp"
-            android:paddingBottom="20dp"/>
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        android:orientation="horizontal">
-
-        <TextView
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:background="@drawable/oval_button"
-            android:gravity="center"
-            android:padding="20dp"
-            android:text="7"
-            android:textColor="#c20000"
-            android:textSize="40dp" />
-
-        <TextView
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:background="@drawable/oval_button"
-            android:gravity="center"
-            android:padding="20dp"
-            android:text="8"
-            android:textColor="#c20000"
-            android:textSize="40dp" />
-
-        <TextView
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:background="@drawable/oval_button"
-            android:gravity="center"
-            android:padding="20dp"
-            android:text="9"
-            android:textColor="#c20000"
-            android:textSize="40dp" />
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center">
-
-        <ImageButton
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:src="@drawable/ic_fingerprint_black_48dp"
-            android:gravity="center"
-            android:paddingBottom="20dp"
-            android:paddingTop="20dp"
-            android:background="@android:color/background_light"
-            android:contentDescription="img" />
-
-        <TextView
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:gravity="center"
-            android:textSize="40dp"
-            android:text="0"
-            android:background="@drawable/oval_button"
-            android:textColor="#c20000"
-            android:paddingTop="20dp"
-            android:paddingBottom="20dp"/>
-
-        <ImageButton
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:src="@drawable/ic_backspace_red_36dp"
-            android:gravity="center"
-            android:paddingBottom="20dp"
-            android:paddingTop="20dp"
-            android:background="@android:color/background_light"
-            android:contentDescription="img" />
-
-    </LinearLayout>
-
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        android:textSize="27sp"
-        android:text="ПОЗВОНИТЬ НАМ"
-        android:background="#ffffff"
-        android:textColor="#c20000"
-        android:layout_margin="15dp"
-        android:drawableStart="@drawable/ic_call_black_24dp"
-        android:drawableLeft="@drawable/ic_call_black_24dp"
-        android:padding="10dp"/>
-
-</LinearLayout>
+</com.sothree.slidinguppanel.SlidingUpPanelLayout>

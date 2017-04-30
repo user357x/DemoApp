@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="@color/colorWhite"
+    android:layout_height="wrap_content"
+    android:layout_width="match_parent"
+    android:orientation="vertical">
+
+    <ImageButton
+        style="@style/da_background_fingerprint_button"
+        android:layout_height="98dp"
+        android:layout_width="100dp"
+        android:src="@drawable/ic_fingerprint_black_48dp"
+        android:layout_gravity="center"
+        android:layout_margin="10dp"
+        android:contentDescription="img" />
+
+    <TextView
+        android:id="@+id/buttonOK"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_gravity="right"
+        android:text="ОТМЕНА"
+        android:textSize="20sp"
+        android:background="#ffffff"
+        android:textColor="#c20000"
+        android:layout_margin="10dp"
+        android:padding="10dp"/>
+
+</LinearLayout>

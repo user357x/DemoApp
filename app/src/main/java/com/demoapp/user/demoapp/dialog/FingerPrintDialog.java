@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageButton;
 import android.widget.TextView;
 
 import com.demoapp.user.demoapp.R;
@@ -33,7 +34,17 @@ public class FingerPrintDialog extends DialogFragment {
                 dismiss();
             }
         });
+        layout.findViewById(R.id.fingerPrint).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                ((FingerPrintListener) getActivity()).login();
+            }
+        });
         return layout;
+    }
+
+    public interface FingerPrintListener {
+        void login();
     }
 
 }

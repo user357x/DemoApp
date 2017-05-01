@@ -1,13 +1,21 @@
 package com.demoapp.user.demoapp;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.MotionEvent;
 import android.view.View;
 import android.widget.ImageButton;
 import android.widget.TextView;
+import android.widget.Toast;
 
-public class MainActivity extends AppCompatActivity {
+import com.demoapp.user.demoapp.dialog.FingerPrintDialog;
+
+import java.util.Arrays;
+
+public class MainActivity extends AppCompatActivity
+    implements FingerPrintDialog.FingerPrintListener {
 
     ImageButton radioButtonOne;
     ImageButton radioButtonTwo;
@@ -31,6 +39,10 @@ public class MainActivity extends AppCompatActivity {
     ImageButton buttonBackspace;
 
     TextView buttonCall;
+
+    String password = "123456";
+    char[] checkPassword = {'x', 'x', 'x', 'x', 'x', 'x'};
+
 
     int currentPosition = 0;
 
@@ -63,10 +75,21 @@ public class MainActivity extends AppCompatActivity {
         View.OnClickListener buttonPasswordClickListener = new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
+
+
                 if(currentPosition < 6) {
+                    setPasswordChar(((TextView) v).getText().charAt(0));
+                    if(currentPosition == 5 && new String(checkPassword).equals(password)) {
+                        login();
+                    }
                     currentPosition++;
-                    setPasswordChar();
                 }
+
+
+                Log.e("my_log_pass", password);
+                Log.e("my_log_check", Arrays.toString(checkPassword));
+                Log.e("my_log_tr", String.valueOf(Arrays.toString(checkPassword).equals(password)));
             }
         };
 
@@ -85,8 +108,8 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 if(currentPosition > 0) {
-                    unsetPasswordChar();
                     currentPosition--;
+                    unsetPasswordChar();
                 }
             }
         });
@@ -100,50 +123,65 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-    void setPasswordChar() {
+    void setPasswordChar(char c) {
+
+        Log.e("my_log", String.valueOf(c));
+        Log.e("my_log", String.valueOf(currentPosition));
+
+        Toast.makeText(MainActivity.this, String.valueOf(c), Toast.LENGTH_SHORT).show();
+
         switch (currentPosition) {
-            case 1:
+            case 0:
                 radioButtonOne.setImageResource(R.drawable.ic_radio_button_checked_black_24dp);
                 break;
-            case 2:
+            case 1:
                 radioButtonTwo.setImageResource(R.drawable.ic_radio_button_checked_black_24dp);
                 break;
-            case 3:
+            case 2:
                 radioButtonThree.setImageResource(R.drawable.ic_radio_button_checked_black_24dp);
                 break;
-            case 4:
+            case 3:
                 radioButtonFour.setImageResource(R.drawable.ic_radio_button_checked_black_24dp);
                 break;
-            case 5:
+            case 4:
                 radioButtonFive.setImageResource(R.drawable.ic_radio_button_checked_black_24dp);
                 break;
-            case 6:
+            case 5:
                 radioButtonSix.setImageResource(R.drawable.ic_radio_button_checked_black_24dp);
                 break;
         }
+        checkPassword[currentPosition] = c;
     }
 
     void unsetPasswordChar() {
         switch (currentPosition) {
-            case 1:
+            case 0:
                 radioButtonOne.setImageResource(R.drawable.ic_radio_button_unchecked_red_24dp);
                 break;
-            case 2:
+            case 1:
                 radioButtonTwo.setImageResource(R.drawable.ic_radio_button_unchecked_red_24dp);
                 break;
-            case 3:
+            case 2:
                 radioButtonThree.setImageResource(R.drawable.ic_radio_button_unchecked_red_24dp);
                 break;
-            case 4:
+            case 3:
                 radioButtonFour.setImageResource(R.drawable.ic_radio_button_unchecked_red_24dp);
                 break;
-            case 5:
+            case 4:
                 radioButtonFive.setImageResource(R.drawable.ic_radio_button_unchecked_red_24dp);
                 break;
-            case 6:
+            case 5:
                 radioButtonSix.setImageResource(R.drawable.ic_radio_button_unchecked_red_24dp);
                 break;
         }
+        checkPassword[currentPosition] = 'x';
+    }
+
+    @Override
+    public void login() {
+        Intent intent = new Intent(MainActivity.this, CameraActivity.class);
+        startActivity(intent);
+        finish();
     }
 
 }

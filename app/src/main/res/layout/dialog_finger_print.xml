@@ -7,6 +7,7 @@
     android:orientation="vertical">
 
     <ImageButton
+        android:id="@+id/fingerPrint"
         style="@style/da_background_fingerprint_button"
         android:layout_height="98dp"
         android:layout_width="100dp"
